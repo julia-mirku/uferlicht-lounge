@@ -1,0 +1,857 @@
+<!doctype html>
+<html lang="de-CH" translate="no">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="google" content="notranslate">
+<title>Uferlicht Restaurant • Lounge – Zug, direkt am See</title>
+<meta name="robots" content="noindex">
+<meta name="description" content="Uferlicht Restaurant • Lounge am Zugersee: Zmorge ab 8 Uhr, Mittag, abends Sushi, Pizza und Pasta, Lounge und Bar. Musterentwurf – Namen und Angaben fiktiv.">
+<meta property="og:title" content="Uferlicht Restaurant • Lounge, Zug">
+<meta property="og:description" content="Das alte Hotel Uferlicht lebt an unserer Wand – Musterentwurf von Julia &amp; Robin Mirku.">
+<meta property="og:image" content="img/og.jpg">
+<meta name="theme-color" content="#16201d">
+<link rel="icon" href="img/favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Gilda+Display&family=Source+Sans+3:wght@300;400;500;600;700&family=Cedarville+Cursive&display=swap" rel="stylesheet">
+<link rel="preload" as="image" href="img/durchgang_hoch_900.webp" media="(max-width: 899px)">
+<link rel="preload" as="image" href="img/durchgang_1600.webp" media="(min-width: 900px)">
+<style>
+:root{
+  --putz:#c6b18f; --putz2:#d2c0a2; --putz3:#ab9673; --tinte:#1f2a2c; --sepia:#4a4538; --bronze:#4a3a10;
+  --gold:#a8873a; --gold-d:#84682a; --gold-l:#d3b46a; --eiche:#8a6a45; --eiche-d:#5f432a; --glut:#f0d48a;
+  --nacht:#1e2925; --nacht2:#18211e; --rosa:#d9c7d6; --creme:#f4f1e8; --blau:#2f4b5a;
+  --serif:"Gilda Display", Georgia, serif; --text:"Source Sans 3", system-ui, -apple-system, sans-serif; --hand:"Cedarville Cursive", cursive;
+  --hh:64px; color-scheme:light;
+  --papier:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='220' height='220'%3E%3Cfilter id='p'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 .45 0 0 0 0 .4 0 0 0 0 .35 0 0 0 .09 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23p)'/%3E%3C/svg%3E");
+  --noise:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='320' height='320'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 .54 0 0 0 0 .49 0 0 0 0 .42 0 0 0 .55 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  --wolken:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='900' height='900'%3E%3Cfilter id='m'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.012' numOctaves='4' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 .6 0 0 0 0 .54 0 0 0 0 .45 0 0 0 .5 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23m)'/%3E%3C/svg%3E");
+}
+*,*::before,*::after{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;overflow-x:clip;scrollbar-gutter:stable;overscroll-behavior-y:none}
+body{margin:0;background:var(--putz);color:var(--tinte);font:17px/1.6 var(--text);font-weight:400;overflow-x:clip;-webkit-tap-highlight-color:transparent;touch-action:manipulation}
+img{display:block;max-width:100%}
+a{color:inherit}
+button{font:inherit;color:inherit}
+:focus:not(:focus-visible){outline:none}
+:focus-visible{outline:2px solid var(--gold);outline-offset:3px;border-radius:6px}
+.wrap{width:100%;max-width:1220px;margin:0 auto;padding:0 20px}
+.kick{font:600 12px/1 var(--text);letter-spacing:.22em;text-transform:uppercase;color:var(--bronze);margin:0 0 14px}
+h2{font:400 clamp(38px,9.5vw,74px)/1 var(--serif);letter-spacing:-.01em;margin:0 0 16px}
+.lead{font-size:18px;line-height:1.6;color:#36302b;max-width:46ch;margin:0 0 24px}
+.hand{font-family:var(--hand);font-weight:400}
+section{position:relative;scroll-margin-top:calc(var(--hh) + env(safe-area-inset-top) - 1px)}
+.putz{background:var(--putz)}
+.putz::before,.putz::after{content:"";position:absolute;inset:0;pointer-events:none;mix-blend-mode:multiply}
+.putz::before{background-image:var(--noise);opacity:.5}
+.putz::after{background-image:var(--wolken);opacity:.55}
+.putz.tief::before{mix-blend-mode:soft-light;opacity:.7}
+.putz.tief::after{mix-blend-mode:soft-light;opacity:.8}
+.putz>*{position:relative;z-index:1}
+.rise{opacity:0;transform:translateY(22px);transition:opacity .8s ease,transform .8s ease}
+.rise.shown{opacity:1;transform:none}
+
+/* Knöpfe */
+.knopf{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:46px;padding:0 20px;border-radius:999px;border:1.5px solid currentColor;background:transparent;color:inherit;text-decoration:none;font:600 15px/1 var(--text);cursor:pointer;transition:background-color .2s,box-shadow .2s,color .2s,border-color .2s,transform .2s}
+.knopf svg{width:17px;height:17px;flex:none}
+.knopf.gold{background:var(--gold);border-color:var(--gold);color:#fff}
+@media (hover:hover){.knopf:hover{box-shadow:0 0 0 5px rgba(220,187,115,.22),0 8px 24px rgba(184,145,63,.3);border-color:var(--gold-l)}.knopf.gold:hover{background:#c69c48}}
+.knopf:active{transform:scale(.97)}
+
+/* Plashka «Entwurf» */
+.kopf{transition:background-color .35s,color .35s,box-shadow .35s,transform .5s cubic-bezier(.22,.61,.36,1)}
+/* Kopf */
+.kopf{position:fixed;inset:0 0 auto;z-index:40;height:calc(var(--hh) + env(safe-area-inset-top));padding:env(safe-area-inset-top) 16px 0;display:flex;align-items:center;gap:12px;color:var(--creme);transition:background-color .35s,color .35s,box-shadow .35s}
+.kopf.hell{background:rgba(200,184,152,.93);-webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px);color:var(--tinte);box-shadow:0 1px 0 rgba(42,33,28,.08)}
+.kopf.dunkel{color:var(--tinte)}
+.logo{display:inline-flex;flex-direction:column;align-items:flex-start;line-height:1;text-decoration:none;color:currentColor;flex:none}
+.logo b{font:400 21px/1 var(--serif);letter-spacing:.2em}
+.logo small{font:600 7.5px/1 var(--text);letter-spacing:.34em;margin-top:5px;opacity:.85}
+.kopf nav{display:none;margin-left:auto;gap:2px}
+.kopf nav a{padding:9px 12px;border-radius:999px;text-decoration:none;font-weight:500;font-size:15px;transition:background-color .2s,color .2s}
+@media (hover:hover){.kopf nav a:hover{background:rgba(184,145,63,.16)}}
+.kopf .rechts{margin-left:auto;display:flex;gap:8px}
+.kopf .knopf{min-height:42px;padding:0 16px}
+.kopf .tel span{display:none}
+.kopf .tel{width:42px;padding:0}
+
+/* ===== Bühne ===== */
+.buehne{position:relative;height:100vh;height:100svh;min-height:560px;overflow:hidden;background:var(--nacht);color:var(--creme);isolation:isolate}
+.buehne .szene{position:absolute;inset:0;will-change:transform}
+.buehne .bild{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.schleier{position:absolute;inset:0;pointer-events:none;background:linear-gradient(180deg,rgba(18,27,24,.42) 0,rgba(18,27,24,0) 16%,rgba(18,27,24,0) 50%,rgba(18,27,24,.74) 84%,rgba(18,27,24,.92) 100%);opacity:0;z-index:1}
+.nachher{position:absolute;left:20px;right:20px;bottom:calc(74px + env(safe-area-inset-bottom));z-index:2;opacity:0;transform:translateY(16px);pointer-events:none}
+.nachher .kick{color:var(--gold-l)}
+.nachher h1{font:400 clamp(46px,12vw,104px)/.95 var(--serif);margin:0 0 14px;letter-spacing:-.01em;text-shadow:0 2px 30px rgba(0,0,0,.35)}
+.nachher p{margin:0 0 22px;max-width:34ch;font-size:17px;color:rgba(247,241,231,.92)}
+.nachher .reihe{display:flex;flex-wrap:wrap;gap:10px}
+.fusszeile{position:absolute;left:20px;right:20px;bottom:calc(18px + env(safe-area-inset-bottom));z-index:2;display:flex;justify-content:space-between;gap:12px;font-size:13px;color:rgba(247,241,231,.82)}
+.fusszeile a{text-decoration:none;border-bottom:1px solid rgba(220,187,115,.5);white-space:nowrap}
+.fusszeile .lang{display:none}
+@media (min-width:600px){.fusszeile .lang{display:inline}}
+.hinweis{position:absolute;left:50%;bottom:calc(54px + env(safe-area-inset-bottom));transform:translateX(-50%);z-index:3;display:flex;flex-direction:column;align-items:center;gap:6px;font:500 12px/1 var(--text);letter-spacing:.18em;text-transform:uppercase;color:var(--creme);transition:opacity .3s}
+.hinweis i{width:1px;height:34px;background:linear-gradient(var(--gold-l),transparent);animation:tropfen 1.8s ease-in-out 3}
+@keyframes tropfen{0%{transform:scaleY(.2);transform-origin:top}60%{transform:scaleY(1);transform-origin:top}100%{transform:scaleY(1);opacity:0}}
+.auf .hinweis,.fertig .hinweis{opacity:0;pointer-events:none}
+.auf .nachher,.fertig .nachher{opacity:1;transform:none;pointer-events:auto;transition:opacity .7s ease .1s,transform .7s ease .1s}
+.auf .schleier,.fertig .schleier{opacity:1;transition:opacity .8s ease}
+/* A */
+.va .b1,.va .b2{will-change:transform,opacity}
+.va .b2{transform:scale(1.14)}
+.va .eintritt{position:absolute;z-index:2;color:var(--tinte);pointer-events:none;text-shadow:0 0 22px rgba(240,234,224,.95),0 0 4px rgba(240,234,224,.9)}
+.va .eintritt b{display:block;font:400 clamp(40px,4.4vw,72px)/.98 var(--serif);letter-spacing:-.01em}
+.va .eintritt span{display:block;margin-top:14px;font:500 13px/1.4 var(--text);letter-spacing:.16em;text-transform:uppercase;color:#5b5047}
+/* ===== Die Wand ===== */
+.s-wand{display:flex;flex-direction:column;padding:64px 0 0}
+.s-wand .wand-inhalt{order:1}
+.s-wand .wandfoto{order:2;display:block;margin-top:30px}
+.s-wand .wandfoto img{width:100%;aspect-ratio:4/5;object-fit:cover;object-position:50% 78%}
+.uebergang{position:absolute;left:0;right:0;top:0;height:72px;z-index:2;pointer-events:none;background:linear-gradient(180deg,rgba(18,27,24,.92) 0,rgba(18,27,24,.42) 32%,rgba(18,27,24,.1) 68%,rgba(18,27,24,0) 100%)}
+.wand-text p{margin:0 0 16px;max-width:44ch;color:#3f362f}
+.zeiten{list-style:none;margin:18px 0 0;padding:0;display:grid;grid-template-columns:1fr 1fr;gap:0 18px;max-width:520px}
+.zeiten li{display:flex;flex-direction:column;gap:2px;padding:10px 0;border-bottom:1px solid rgba(42,33,28,.18);transition:border-color .2s}
+.zeiten b{font:400 22px/1.2 var(--serif)}
+.zeiten span{font-size:14px;color:#38332e}
+@media (hover:hover){.zeiten li:hover{border-color:var(--gold)}}
+.details{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;margin-top:24px;max-width:520px}
+.detail{position:relative;margin:0;cursor:zoom-in;border-radius:4px;overflow:hidden;aspect-ratio:1/1;box-shadow:0 14px 30px rgba(40,30,22,.28);background:var(--putz3)}
+.detail img{width:100%;height:100%;object-fit:cover;transition:transform .6s ease}
+.detail figcaption{position:absolute;left:10px;bottom:8px;font:400 13px/1.3 var(--hand);color:#fff;text-shadow:0 1px 8px rgba(0,0,0,.7)}
+@media (hover:hover){.detail:hover img{transform:scale(1.05)}}
+
+/* ===== Der Tag ===== */
+.s-tag{padding:56px 0 28px}
+.tag-reihe{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:26px}
+.stunde{position:relative;border-radius:4px;overflow:hidden;aspect-ratio:3/4;background:var(--putz3);box-shadow:0 14px 34px rgba(60,45,35,.16);transition:transform .3s ease,box-shadow .3s ease}
+.stunde img{width:100%;height:100%;object-fit:cover}
+.stunde::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(28,18,12,0) 45%,rgba(28,18,12,.78) 100%)}
+.stunde div{position:absolute;left:14px;right:14px;bottom:12px;z-index:1;color:var(--creme)}
+.stunde small{display:block;font:600 11px/1 var(--text);letter-spacing:.18em;color:var(--gold-l);margin-bottom:6px}
+.stunde b{display:block;font:400 26px/1.05 var(--serif)}
+.stunde p{margin:6px 0 0;font-size:14px;line-height:1.4;color:rgba(247,241,231,.88)}
+@media (hover:hover){.stunde:hover{transform:translateY(-4px);box-shadow:0 22px 44px rgba(60,45,35,.24)}}
+
+/* ===== Karte: Schlüsselbrett ===== */
+.s-karte{padding:28px 0 20px}
+.brett{position:relative;margin:26px 0 22px;padding:28px 10px 6px;border-radius:6px;background:linear-gradient(180deg,#7c5a3a 0,#5f432a 100%);box-shadow:inset 0 1px 0 rgba(255,235,200,.35),inset 0 -2px 0 rgba(60,35,15,.35),0 18px 36px rgba(60,45,35,.22)}
+.brett::before{content:"";position:absolute;inset:0;border-radius:6px;opacity:.35;mix-blend-mode:multiply;background:repeating-linear-gradient(90deg,rgba(80,45,15,.0) 0 7px,rgba(80,45,15,.25) 7px 8px,rgba(80,45,15,0) 8px 19px,rgba(80,45,15,.18) 19px 20px)}
+.schluessel{position:relative;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:4px 6px}
+.sl{position:relative;display:flex;flex-direction:column;align-items:center;padding:0 2px 14px;border:0;background:none;cursor:pointer;color:var(--creme)}
+.sl .haken{width:12px;height:12px;border-radius:50%;background:radial-gradient(circle at 35% 35%,#f4dc9c,#a07a2c 70%);box-shadow:0 1px 2px rgba(0,0,0,.4)}
+.sl .anh{position:relative;margin-top:-2px;transform-origin:50% 0;transition:transform .45s cubic-bezier(.3,1.6,.5,1)}
+.sl .ring{display:block;width:22px;height:22px;margin:0 auto -6px;border-radius:50%;border:3px solid #c9a24b;box-shadow:inset 0 0 0 1px rgba(90,60,10,.35)}
+.sl .fob{position:relative;display:flex;flex-direction:column;align-items:center;justify-content:center;width:66px;height:104px;border-radius:33px/40px;background:radial-gradient(120% 80% at 30% 20%,#f6e2a6 0,#d8b25a 38%,#a9822f 70%,#7c5d1c 100%);box-shadow:0 8px 14px rgba(40,25,5,.35),inset 0 0 0 2px rgba(255,240,200,.35),inset 0 -4px 8px rgba(80,50,10,.35)}
+.sl .fob i{font:normal 400 34px/1 var(--serif);color:#5a4012;text-shadow:0 1px 0 rgba(255,240,200,.65),0 -1px 0 rgba(60,40,5,.45)}
+.sl .fob em{font:normal 600 8px/1 var(--text);letter-spacing:.16em;color:#5a4012;margin-top:4px;opacity:.85}
+.sl .name{margin-top:10px;font:600 13px/1.2 var(--text);letter-spacing:.06em;text-align:center;color:var(--creme);text-shadow:0 1px 2px rgba(0,0,0,.35)}
+.sl.zu .anh{animation:schwing 1.6s ease-out 1}
+@keyframes schwing{0%{transform:rotate(0)}18%{transform:rotate(7deg)}40%{transform:rotate(-5deg)}62%{transform:rotate(3deg)}82%{transform:rotate(-1.5deg)}100%{transform:rotate(0)}}
+@media (hover:hover){.sl:hover .anh{transform:rotate(-6deg)}}
+.sl[aria-pressed="true"] .anh{transform:translateY(-6px) rotate(0)}
+.sl[aria-pressed="true"] .fob{background:radial-gradient(120% 80% at 30% 20%,#fff0c4 0,#e9c56c 38%,#b88f37 70%,#86641f 100%);box-shadow:0 0 0 3px rgba(244,198,110,.55),0 10px 22px rgba(40,25,5,.45)}
+.sl[aria-pressed="true"] .name{color:#fff}
+.zimmer{display:grid;gap:0;background:var(--creme);border-radius:6px;overflow:hidden;box-shadow:0 18px 40px rgba(60,45,35,.16)}
+.zimmer figure{margin:0;position:relative;aspect-ratio:16/10;overflow:hidden;background:var(--putz3);cursor:zoom-in}
+.zimmer figure img{width:100%;height:100%;object-fit:cover}
+.zimmer figure figcaption{position:absolute;left:12px;bottom:10px;font:400 15px/1.3 var(--hand);color:#fff;text-shadow:0 1px 8px rgba(0,0,0,.6)}
+.zimmer figure.schild{cursor:default;display:grid;place-items:center;background-color:var(--putz);background-image:var(--noise),var(--wolken);background-blend-mode:multiply}
+.schild div{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:4px;width:138px;height:176px;border-radius:69px/88px;background:radial-gradient(120% 80% at 30% 20%,#f6e2a6 0,#d8b25a 38%,#a9822f 70%,#7c5d1c 100%);box-shadow:0 16px 30px rgba(30,40,50,.35),inset 0 0 0 3px rgba(255,240,200,.35),inset 0 -6px 12px rgba(80,50,10,.35)}
+.schild i{font:normal 400 60px/1 var(--serif);color:#5a4012;text-shadow:0 1px 0 rgba(255,240,200,.65),0 -1px 0 rgba(60,40,5,.45)}
+.schild b{font:600 11px/1.25 var(--text);letter-spacing:.14em;text-transform:uppercase;color:#5a4012;text-align:center;max-width:110px}
+.schild em{font:normal 600 8px/1 var(--text);letter-spacing:.2em;text-transform:uppercase;color:#5a4012;opacity:.8}
+.zimmer .liste{padding:14px 20px 18px}
+.zimmer h3{font:400 30px/1.05 var(--serif);margin:10px 0 4px}
+.zimmer .nr{font:600 11px/1 var(--text);letter-spacing:.2em;color:var(--gold-d);text-transform:uppercase}
+.zimmer .note{font-size:14px;color:var(--sepia);margin:0 0 8px}
+.tipp{margin:8px 0 6px;padding:10px 14px;border-left:3px solid var(--gold);background:rgba(220,187,115,.14);border-radius:0 6px 6px 0;font-size:15px;line-height:1.45;color:#4a3d33}
+.tipp span{display:block;font:400 13px/1.2 var(--hand);color:var(--blau);margin-bottom:6px}
+.tipp cite{display:block;font-style:normal;font-size:12px;color:var(--sepia);margin-top:4px}
+.pos{display:grid;grid-template-columns:1fr auto;gap:2px 14px;padding:9px 0;border-bottom:1px dotted rgba(42,33,28,.25)}
+.pos:last-of-type{border-bottom:0}
+.pos b{font-weight:600}
+.pos small{grid-column:1;color:var(--sepia);font-size:13.5px;line-height:1.35}
+.pos .pr{grid-row:1/span 2;grid-column:2;align-self:center;font:400 18px/1 var(--serif);padding:7px 10px;border-radius:6px;white-space:nowrap;transition:background-color .2s,color .2s,box-shadow .2s}
+.pos .pr.s{font:600 12px/1 var(--text);letter-spacing:.06em}
+@media (hover:hover){.pos:hover .pr{background:var(--gold);color:#fff;box-shadow:0 0 0 4px rgba(220,187,115,.25)}}
+.pos.tap .pr{background:var(--gold);color:#fff}
+.pos em.gt{font:normal 600 9px/1 var(--text);letter-spacing:.12em;text-transform:uppercase;color:#fff;background:var(--eiche);padding:4px 7px;border-radius:999px;margin-left:6px;vertical-align:2px;white-space:nowrap}
+.seiten{display:flex;flex-wrap:wrap;align-items:center;gap:8px;margin:4px 0 10px}
+.seiten button{min-height:38px;padding:0 13px;border-radius:999px;border:1.5px solid rgba(42,33,28,.3);background:transparent;cursor:pointer;font:500 13px/1 var(--text);transition:background-color .2s,color .2s,border-color .2s,box-shadow .2s}
+.seiten button[aria-pressed="true"]{background:var(--tinte);border-color:var(--tinte);color:var(--creme)}
+@media (hover:hover){.seiten button:not([aria-pressed="true"]):hover{border-color:var(--gold);box-shadow:0 0 0 4px rgba(220,187,115,.2)}}
+.seiten span{font-size:13px;color:var(--sepia)}
+.fuss{font-size:13px;color:var(--sepia);margin:12px 2px 0}
+
+/* ===== Lounge ===== */
+.s-lounge{padding:44px 0 28px;background:linear-gradient(180deg,#535a49 0,#343e36 24px,var(--nacht) 48px,var(--nacht) 100%);color:var(--creme)}
+.s-lounge .kick{color:var(--gold-l)}
+.s-lounge .lead{color:rgba(247,241,231,.78)}
+.lounge-grid{display:grid;gap:26px}
+.raumbild{position:relative;border-radius:6px;overflow:hidden;box-shadow:0 30px 60px rgba(0,0,0,.45);background:#2b241f}
+.raumbild img{width:100%;height:auto;aspect-ratio:3/2;object-fit:cover}
+.punkt{position:absolute;z-index:2;width:34px;height:34px;margin:-17px 0 0 -17px;border-radius:50%;border:0;padding:0;cursor:pointer;background:radial-gradient(circle,#fff7e6 0 5px,rgba(244,198,110,.95) 6px 9px,rgba(244,198,110,.25) 10px 17px);box-shadow:0 0 0 0 rgba(244,198,110,.6);transition:transform .2s}
+.punkt.puls{animation:puls 1.6s ease-out 2}
+@keyframes puls{0%{box-shadow:0 0 0 0 rgba(244,198,110,.6)}100%{box-shadow:0 0 0 18px rgba(244,198,110,0)}}
+@media (hover:hover){.punkt:hover{transform:scale(1.15)}}
+.punkt[aria-pressed="true"]{background:radial-gradient(circle,#fff 0 6px,#f4c66e 7px 11px,rgba(244,198,110,.35) 12px 17px)}
+.blase{position:absolute;z-index:3;max-width:250px;padding:12px 14px;border-radius:8px;background:rgba(20,17,16,.88);-webkit-backdrop-filter:blur(6px);backdrop-filter:blur(6px);color:var(--creme);font-size:14px;line-height:1.4;box-shadow:0 10px 24px rgba(0,0,0,.4);pointer-events:none;opacity:0;transform:translateY(6px);transition:opacity .25s,transform .25s}
+.blase.an{opacity:1;transform:none}
+.blase b{display:block;font:400 18px/1.15 var(--serif);color:var(--glut);margin-bottom:3px}
+.bar-liste{list-style:none;margin:0;padding:0;display:grid;gap:2px}
+.bar-liste li{display:flex;justify-content:space-between;gap:14px;padding:11px 0;border-bottom:1px solid rgba(247,241,231,.12);transition:border-color .2s}
+.bar-liste b{font:400 21px/1.2 var(--serif)}
+.bar-liste span{font-size:14px;color:rgba(247,241,231,.65);text-align:right}
+@media (hover:hover){.bar-liste li:hover{border-color:var(--gold-l)}}
+.mini{display:grid;grid-template-columns:1fr 1fr 1fr;gap:8px;margin-top:18px}
+.mini button{padding:0;border:0;border-radius:4px;overflow:hidden;aspect-ratio:1/1;cursor:zoom-in;background:#2b241f}
+.mini img{width:100%;height:100%;object-fit:cover;transition:transform .5s}
+@media (hover:hover){.mini button:hover img{transform:scale(1.06)}}
+
+/* ===== Gäste: Postkarten ===== */
+.s-gaeste{padding:36px 0 28px}
+.streifen-wrap{position:relative;margin-top:20px}
+.karten{display:grid;grid-auto-flow:column;grid-auto-columns:86%;gap:16px;overflow-x:auto;overflow-y:hidden;overscroll-behavior-x:contain;scroll-snap-type:x mandatory;padding:14px 6px 26px;scrollbar-width:none}
+.karten::-webkit-scrollbar{display:none}
+.pk{scroll-snap-align:start}
+.pfeil{display:none}
+.punkte{display:flex;justify-content:center;gap:8px;margin-top:2px}
+.punkte button{width:9px;height:9px;border-radius:999px;border:0;padding:0;background:rgba(42,33,28,.25);cursor:pointer;transition:width .3s,background-color .3s}
+.punkte button[aria-current="true"]{width:24px;background:var(--gold)}
+.pk{position:relative;display:grid;grid-template-columns:1fr;gap:12px;padding:20px 20px 18px;background:#fbf7ef;border-radius:3px;box-shadow:0 2px 3px rgba(60,45,35,.12),0 18px 34px rgba(60,45,35,.18);transition:transform .35s ease,box-shadow .35s ease}
+.pk:nth-child(odd){transform:rotate(-.9deg)}
+.pk:nth-child(even){transform:rotate(.8deg)}
+@media (hover:hover){.pfeil:not(:disabled):hover{border-color:var(--gold);box-shadow:0 0 0 5px rgba(220,187,115,.22)}.pk:hover{transform:rotate(0) translateY(-4px);box-shadow:0 4px 6px rgba(60,45,35,.12),0 26px 46px rgba(60,45,35,.24)}}
+.pk .text{font-size:15.5px;line-height:1.55;color:#3c322b}
+.pk .anrede{font:400 15px/1.3 var(--hand);color:var(--blau);margin:0 0 8px}
+.pk .gez{font:400 16px/1.3 var(--hand);color:var(--blau);margin:10px 0 0}
+.pk .rechts{position:relative;display:flex;align-items:center;gap:6px;border-top:1px solid rgba(42,33,28,.15);padding-top:12px}
+.pk .adr{font:400 13px/1.9 var(--hand);color:var(--blau);margin-left:auto}
+.pk .mk{position:relative;flex:none;width:64px;height:80px;padding:6px;background:radial-gradient(circle at 4px 4px,transparent 2.4px,#fbf7ef 2.9px) -4px -4px/8px 8px;filter:drop-shadow(0 2px 4px rgba(60,45,35,.25))}
+.pk .mk div{width:100%;height:100%;background:linear-gradient(160deg,#cf9656,#a96b33);display:flex;flex-direction:column;align-items:center;justify-content:center;color:#fff7ea;font:600 10px/1.2 var(--text);letter-spacing:.06em;text-align:center}
+.pk .mk div b{font:400 15px/1 var(--serif);letter-spacing:0;color:#fff}
+.pk .pm{position:relative;flex:none;margin-left:-30px;width:76px;height:76px;border-radius:50%;border:1.5px solid rgba(46,58,82,.6);color:rgba(46,58,82,.75);display:flex;flex-direction:column;align-items:center;justify-content:center;font:600 8px/1.3 var(--text);letter-spacing:.12em;text-align:center;transform:rotate(-14deg);pointer-events:none}
+.pk .pm b{font:400 11px/1 var(--serif);letter-spacing:.02em;margin:2px 0}
+.score{display:flex;flex-wrap:wrap;gap:10px;margin:4px 0 0}
+.score a{display:flex;align-items:baseline;gap:10px;padding:10px 14px;border-radius:10px;border:1px solid rgba(42,33,28,.18);text-decoration:none;transition:border-color .2s,box-shadow .2s;background:rgba(251,247,239,.6)}
+.score b{font:400 30px/1 var(--serif);color:var(--gold-d)}
+.score span{font-size:13px;color:var(--sepia)}
+@media (hover:hover){.score a:hover{border-color:var(--gold);box-shadow:0 0 0 4px rgba(220,187,115,.18)}}
+
+/* ===== Feiern ===== */
+.s-feiern{padding:28px 0 20px;background:linear-gradient(180deg,var(--putz) 0,var(--putz) calc(100% - 76px),#8f8a6f calc(100% - 34px),#5f6553 100%)}
+.feiern-grid{display:grid;gap:16px;margin-top:22px}
+.fbild{margin:0;position:relative;border-radius:6px;overflow:hidden;aspect-ratio:4/3;background:var(--putz3);box-shadow:0 18px 40px rgba(30,40,50,.2);cursor:zoom-in}
+.fbild img{width:100%;height:100%;object-fit:cover;object-position:50% 60%}
+.fkarten{display:grid;gap:16px}
+.fk{position:relative;display:grid;background:var(--creme);border-radius:6px;overflow:hidden;box-shadow:0 18px 40px rgba(60,45,35,.14);transition:box-shadow .3s,transform .3s}
+@media (hover:hover){.fk:hover{box-shadow:0 24px 50px rgba(60,45,35,.22);transform:translateY(-3px)}}
+.fk figure{margin:0;aspect-ratio:16/9;overflow:hidden;background:var(--putz3);cursor:zoom-in}
+.fk figure img{width:100%;height:100%;object-fit:cover}
+.fk .in{padding:20px 22px 22px;display:flex;flex-direction:column;gap:10px}
+.fk h3{font:400 30px/1.05 var(--serif);margin:0}
+.fk p{margin:0;color:#4f443b}
+.fk blockquote{margin:4px 0 0;padding:2px 0 0 14px;border-left:3px solid var(--gold);font-size:15px;line-height:1.5;color:#4a3d33}
+.fk blockquote cite{display:block;font-style:normal;font-size:12.5px;color:var(--sepia);margin-top:4px}
+.fk .reihe{display:flex;flex-wrap:wrap;gap:10px;margin-top:6px}
+
+.zimmer,.fk,.pk,.pk-vorn,.pk-hinten{background-image:var(--papier)}
+
+/* ===== Besuch: Postkarte zum Abschied ===== */
+.s-besuch{padding:28px 0 40px;background:linear-gradient(180deg,var(--nacht) 0,var(--nacht2) 100%);color:var(--creme)}
+.s-besuch .kick{color:var(--gold-l)}
+.abschied{display:grid;gap:16px;margin-top:20px}
+.pk-vorn{position:relative;margin:0;padding:12px 12px 44px;background:#fbf7ef;border-radius:3px;box-shadow:0 2px 3px rgba(0,0,0,.25),0 24px 50px rgba(0,0,0,.45);transform:rotate(-1.2deg);cursor:zoom-in;transition:transform .35s ease}
+.pk-vorn img{width:100%;aspect-ratio:3/2;object-fit:cover;border-radius:2px}
+.pk-vorn figcaption{position:absolute;left:14px;right:14px;bottom:13px;font:500 11px/1.2 var(--text);letter-spacing:.18em;text-transform:uppercase;color:#4b3f36}
+.pk-hinten{position:relative;display:grid;gap:14px;padding:20px 20px 22px;background:#fbf7ef;color:var(--tinte);border-radius:3px;box-shadow:0 2px 3px rgba(0,0,0,.25),0 24px 50px rgba(0,0,0,.45);transform:rotate(.8deg);transition:transform .35s ease}
+@media (hover:hover){.pk-vorn:hover,.pk-hinten:hover{transform:rotate(0) translateY(-3px)}}
+.ph-gruss{font:400 19px/1.3 var(--hand);color:var(--blau);margin:0 0 12px}
+.tage{display:grid;grid-template-columns:repeat(7,1fr);gap:5px;margin:0 0 12px}
+.tage button{min-height:40px;border-radius:7px;border:1.5px solid rgba(42,33,28,.22);background:transparent;cursor:pointer;font-weight:600;font-size:14px;color:var(--tinte);transition:border-color .2s,background-color .2s,color .2s,box-shadow .2s}
+@media (hover:hover){.tage button:hover{border-color:var(--gold);box-shadow:0 0 0 3px rgba(220,187,115,.22)}}
+.tage button[aria-pressed="true"]{background:var(--gold);border-color:var(--gold);color:#fff}
+.pk-hinten .tg{font-size:13.5px;color:var(--sepia);margin:0 0 2px}
+.pk-hinten .h{font:400 clamp(34px,9vw,46px)/1 var(--serif);margin:0 0 10px;white-space:nowrap}
+.ph-klein{font-size:13.5px;color:#55493f;margin:0}
+.ph-klein b{color:var(--gold-d);font-weight:600}
+.ph-rechts{display:flex;flex-direction:column;gap:12px;border-top:1px solid rgba(42,33,28,.15);padding-top:14px}
+.ph-oben{display:flex;align-items:center;justify-content:flex-end}
+.pk-hinten .mk.gross{display:block;width:86px;height:106px;padding:7px;background:radial-gradient(circle at 5px 5px,transparent 3px,#fbf7ef 3.5px) -5px -5px/10px 10px;filter:drop-shadow(0 2px 5px rgba(60,45,35,.3));transform:rotate(3deg)}
+.pk-hinten .mk.gross div{width:100%;height:100%;background:linear-gradient(160deg,#cf9656,#a96b33);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:6px;color:#fff7ea;font:600 8px/1 var(--text);letter-spacing:.14em}
+.pk-hinten .mk.gross .logo b{font-size:11px;letter-spacing:.14em}
+.pk-hinten .pm.gross{position:relative;margin-right:-26px;z-index:1;width:96px;height:96px;border-radius:50%;border:1.5px solid rgba(46,58,82,.6);color:rgba(46,58,82,.78);display:flex;flex-direction:column;align-items:center;justify-content:center;font:600 9px/1.3 var(--text);letter-spacing:.14em;transform:rotate(-12deg)}
+.pk-hinten .pm.gross b{font:400 14px/1 var(--serif);letter-spacing:.02em;margin:2px 0}
+.ph-adr{font-style:normal;font:400 15px/2 var(--hand);color:var(--blau)}
+.ph-adr a{text-decoration:none;border-bottom:1px solid rgba(59,79,107,.35);transition:color .2s,border-color .2s}
+@media (hover:hover){.ph-adr a:hover{color:var(--gold-d);border-color:var(--gold)}}
+.knoepfe{display:flex;flex-wrap:wrap;gap:10px;margin:26px 0 18px}
+.knoepfe .knopf{color:var(--creme)}
+.knoepfe .knopf.gold{color:#fff}
+.weg{list-style:none;margin:0 0 12px;padding:0;display:grid;gap:8px}
+.weg li{display:flex;gap:12px;align-items:flex-start;padding:11px 13px;border-radius:10px;border:1px solid rgba(247,241,231,.12);transition:border-color .2s,background-color .2s}
+@media (hover:hover){.weg li:hover{border-color:var(--gold-l);background:rgba(220,187,115,.07)}}
+.weg svg{width:21px;height:21px;color:var(--gold-l);flex:none;margin-top:2px}
+.weg b{display:block;font-weight:600}
+.weg span{font-size:14px;color:rgba(247,241,231,.78)}
+.s-besuch .klein{font-size:13.5px;color:rgba(247,241,231,.62);margin:6px 0 0}
+footer{background:var(--nacht2);color:rgba(247,241,231,.6);font-size:13.5px;padding:22px 0 calc(22px + env(safe-area-inset-bottom));border-top:1px solid rgba(247,241,231,.08)}
+footer .wrap{display:flex;flex-wrap:wrap;gap:8px 24px;justify-content:space-between;align-items:center}
+footer .logo{color:var(--creme)}
+footer .fiktiv{display:inline-block;padding:3px 9px;border:1px solid rgba(244,241,232,.35);border-radius:999px;font-size:12px;letter-spacing:.04em}
+
+/* Lightbox */
+.lb{position:fixed;inset:0;z-index:80;background:rgba(12,10,9,.94);display:none;align-items:center;justify-content:center;padding:20px;cursor:zoom-out}
+.lb.offen{display:flex}
+.lb img{max-width:100%;max-height:100%;object-fit:contain;border-radius:6px;touch-action:pinch-zoom}
+.lb button{position:absolute;top:calc(14px + env(safe-area-inset-top));right:14px;width:46px;height:46px;border-radius:50%;border:1.5px solid rgba(247,241,231,.4);background:rgba(20,17,16,.6);color:#fff;font-size:24px;cursor:pointer}
+
+/* ===== Phone-spezifisch Bühne ===== */
+@media (max-width:899px){
+  .va .eintritt{left:20px;right:20px;bottom:calc(122px + env(safe-area-inset-bottom));color:var(--creme)}
+  .va .eintritt b{font-size:clamp(44px,13vw,64px);text-shadow:0 2px 24px rgba(0,0,0,.45)}
+  .va .eintritt span{color:rgba(247,241,231,.85)}
+  .va .vorhang{position:absolute;inset:auto 0 0 0;height:46%;background:linear-gradient(180deg,rgba(18,27,24,0),rgba(18,27,24,.78));z-index:1}
+}
+@media (min-width:600px){
+  .tag-reihe{grid-template-columns:repeat(4,1fr)}
+  .kopf .tel{width:auto;padding:0 16px}.kopf .tel span{display:inline}
+  .streifen-wrap{padding:0 62px}
+  .pfeil{display:grid;place-items:center;position:absolute;top:50%;z-index:2;width:48px;height:48px;margin-top:-24px;border-radius:50%;border:1.5px solid rgba(42,33,28,.3);background:rgba(251,247,239,.92);color:var(--tinte);cursor:pointer;transition:background-color .2s,border-color .2s,box-shadow .2s,opacity .2s}
+  .pfeil svg{width:20px;height:20px}
+  .pfeil.zurueck{left:0}.pfeil.vor{right:0}
+  .pfeil:disabled{opacity:.28;cursor:default}
+  .karten{grid-auto-columns:calc((100% - 16px)/2)}
+  .punkte{display:none}
+}
+@media (min-width:900px) and (max-width:1199px){
+  .pk{grid-template-columns:1.35fr 1fr;gap:18px}
+  .pk .rechts{flex-direction:column;align-items:flex-end;border-top:0;border-left:1px solid rgba(42,33,28,.15);padding:0 0 0 16px}
+  .pk .pm{margin:-34px 34px 0 0}
+  .pk .adr{align-self:flex-start;margin:auto 0 0 0}
+}
+/* ===== Tablet: Abstände ===== */
+@media (min-width:600px) and (max-width:899px){
+  .s-tag{padding:64px 0 36px}
+  .s-karte{padding:36px 0 28px}
+  .s-lounge{padding:56px 0 36px;background:linear-gradient(180deg,#535a49 0,#343e36 30px,var(--nacht) 60px,var(--nacht) 100%)}
+  .s-gaeste{padding:44px 0 36px}
+  .s-feiern{padding:36px 0 28px;background:linear-gradient(180deg,var(--putz) 0,var(--putz) calc(100% - 90px),#8f8a6f calc(100% - 40px),#5f6553 100%)}
+  .s-besuch{padding:36px 0 44px}
+}
+/* ===== Tablet hoch ===== */
+@media (min-width:700px) and (max-width:899px){
+  .wrap{padding:0 32px}
+  h2{font-size:clamp(40px,6.4vw,56px)}
+  .schluessel{grid-template-columns:repeat(6,minmax(0,1fr))}
+  .zimmer{grid-template-columns:2fr 3fr}
+  .zimmer figure{aspect-ratio:auto;min-height:100%}
+  .fbild{aspect-ratio:16/9}
+  .fkarten{grid-template-columns:1fr 1fr;align-items:start}
+  .abschied{grid-template-columns:1fr 1fr;gap:22px;align-items:start}
+  .weg{grid-template-columns:repeat(3,1fr)}
+}
+/* ===== Computer ===== */
+@media (min-width:900px){
+  :root{--hh:72px}
+  .wrap{padding:0 40px}
+  .kopf{padding-left:30px;padding-right:30px}
+  .logo b{font-size:25px}
+  .kopf nav{display:flex}
+  .kopf .rechts{margin-left:12px}
+  h2{font-size:clamp(46px,4.6vw,70px)}
+  .lead{font-size:19px}
+  .nachher{left:56px;right:auto;bottom:96px;max-width:640px}
+  .nachher p{font-size:19px}
+  .fusszeile{left:56px;right:56px;bottom:30px;font-size:14px}
+  .schleier{background:linear-gradient(180deg,rgba(18,27,24,.45) 0,rgba(18,27,24,0) 14%,rgba(18,27,24,0) 78%,rgba(18,27,24,.9) 100%),radial-gradient(70% 75% at 0% 100%,rgba(18,27,24,.82) 0,rgba(18,27,24,.6) 38%,rgba(18,27,24,0) 72%)}
+  .va .eintritt{left:2.4%;top:24%;width:12.5%}
+  .va .eintritt b{font-size:clamp(34px,3.5vw,58px)}
+  .s-wand{min-height:max(620px,calc(100vh - var(--hh)));justify-content:center;padding:64px 0 44px;background:#bfa983}
+  .s-wand .uebergang{height:96px}
+  .s-wand.putz::before,.s-wand.putz::after{display:none}
+  .s-wand .wandfoto{position:absolute;inset:0;margin:0;z-index:0}
+  .s-wand .wandfoto img{position:absolute;inset:0;width:100%;height:100%;aspect-ratio:auto;object-fit:cover;object-position:72% 50%}
+  .wand-inhalt{position:relative;z-index:1}
+  .wand-text,.details{max-width:540px}
+  .wand-text h2{font-size:clamp(44px,4.2vw,64px)}
+  .s-tag{padding:52px 0 48px}
+  .tag-reihe{gap:16px}
+  .stunde{aspect-ratio:4/5}
+  .s-karte{padding:52px 0 36px}
+  .karte-grid{display:grid;grid-template-columns:5fr 7fr;gap:44px;align-items:start}
+  .karte-links .lead{margin-bottom:0}
+  .brett{margin:24px 0 0;padding:24px 14px 4px}
+  .zimmer{grid-template-columns:2fr 3fr;min-height:520px}
+  .zimmer figure{aspect-ratio:auto;min-height:100%}
+  .zimmer .liste{padding:12px 26px 16px}
+  .pos{padding:7px 0}
+  .s-lounge{padding:76px 0 44px;background:linear-gradient(180deg,#535a49 0,#343e36 40px,var(--nacht) 80px,var(--nacht) 100%)}
+  .lounge-grid{grid-template-columns:7fr 4fr;gap:44px;align-items:center}
+  .s-gaeste{padding:64px 0 48px}
+  .gaeste-kopf{display:flex;align-items:flex-end;justify-content:space-between;gap:30px;flex-wrap:wrap}
+  .gaeste-kopf h2{margin:0}
+  .s-feiern{padding:52px 0 40px;background:linear-gradient(180deg,var(--putz) 0,var(--putz) calc(100% - 110px),#8f8a6f calc(100% - 48px),#5f6553 100%)}
+  .feiern-grid{grid-template-columns:5fr 7fr;gap:24px;align-items:stretch}
+  .fbild{aspect-ratio:auto;min-height:100%}
+  .fkarten{gap:20px}
+  .fk{grid-template-columns:1fr}
+  .fk figure{aspect-ratio:21/9}
+  .s-besuch{padding:52px 0 50px}
+  .abschied{grid-template-columns:1fr 1fr;gap:34px;align-items:center}
+  .pk-hinten{grid-template-columns:1.25fr 1fr;gap:22px;padding:26px 28px 26px}
+  .ph-rechts{border-top:0;border-left:1px solid rgba(42,33,28,.15);padding:0 0 0 22px;justify-content:space-between}
+  .weg{grid-template-columns:repeat(3,1fr)}
+  .knoepfe{margin:30px 0 16px}
+}
+@media (min-width:1200px){
+  .karten{grid-auto-columns:calc((100% - 52px)/3);gap:26px}
+  .pk .text{font-size:15px}
+}
+@media (min-width:900px) and (max-height:820px){
+  .s-wand{padding:44px 0 28px}
+  .details{max-width:420px;margin-top:16px}
+  .wand-text p{margin-bottom:10px;font-size:16px}
+  .zeiten{margin-top:12px;gap:2px}.zeiten li{padding:6px 0}.zeiten b{font-size:19px}
+  .zimmer{min-height:500px}
+  .pos{padding:5px 0}
+  .fk figure{aspect-ratio:3/1}
+  .s-karte{padding:44px 0 32px}
+  .s-feiern{padding:44px 0 36px}
+  .s-besuch{padding:48px 0 24px}
+  .pk-vorn img{aspect-ratio:2/1}
+  .pk-hinten{padding:18px 24px}
+  .pk-hinten .h{font-size:38px}
+  .knoepfe{margin:18px 0 12px}
+  .weg li{padding:8px 12px}
+  .s-besuch .klein{display:none}
+  .s-lounge{padding:76px 0 40px}
+}
+@media (max-height:520px) and (orientation:landscape){
+  .buehne{min-height:0}
+  .nachher{bottom:calc(44px + env(safe-area-inset-bottom))}
+  .nachher h1{font-size:40px;margin-bottom:6px}
+  .nachher p{display:none}
+  .nachher .kick{margin-bottom:8px}
+  .va .eintritt{bottom:auto;top:calc(var(--hh) + 16px)}
+  .va .eintritt b{font-size:38px}
+  .hinweis{bottom:calc(40px + env(safe-area-inset-bottom))}
+  .s-wand .wandfoto img{aspect-ratio:16/9}
+}
+@media (max-width:370px){
+  .sl .fob{width:56px;height:90px}
+  .sl .fob i{font-size:28px}
+  .sl .name{font-size:12px}
+}
+@media (prefers-reduced-motion:reduce){
+  .rise{opacity:1;transform:none;transition:none}
+  .sl.zu .anh,.punkt.puls,.hinweis i{animation:none}
+}
+.pk .anrede{font-size:19px}.pk .gez{font-size:20px}.pk .adr{font-size:16px;line-height:1.8}
+.ph-gruss{font-size:24px}.ph-adr{font-size:18px;line-height:1.85}
+.tipp span{font-size:16px}.detail figcaption{font-size:17px}.zimmer figure figcaption{font-size:19px}
+.pk .anrede,.pk .gez,.pk .adr,.ph-gruss,.ph-adr,.tipp span{color:#203b49;font-weight:400}
+.feiern-grid.ohne-bild{grid-template-columns:1fr}
+.nachher .kick{max-width:none}
+@media (min-width:700px){.ohne-bild .fkarten{grid-template-columns:1fr 1fr;align-items:stretch}}
+@media (max-width:899px){.schleier{background:linear-gradient(180deg,rgba(18,27,24,.42) 0,rgba(18,27,24,0) 16%,rgba(18,27,24,0) 32%,rgba(18,27,24,.64) 56%,rgba(18,27,24,.82) 84%,rgba(18,27,24,.92) 100%)}}
+@media (min-width:900px){.schleier{background:linear-gradient(180deg,rgba(18,27,24,.45) 0,rgba(18,27,24,0) 14%,rgba(18,27,24,0) 78%,rgba(18,27,24,.9) 100%),radial-gradient(92% 105% at 0% 100%,rgba(18,27,24,.9) 0,rgba(18,27,24,.7) 44%,rgba(18,27,24,0) 80%)}}
+</style>
+</head>
+<body>
+<header class="kopf" id="kopf">
+  <a href="#start" class="logo" aria-label="Uferlicht Restaurant • Lounge – zum Anfang"><b>UFERLICHT</b><small>RESTAURANT · LOUNGE</small></a>
+  <nav aria-label="Seiten">
+    <a href="#wand">Die Wand</a><a href="#karte">Karte</a><a href="#gaeste">Gäste</a><a href="#feiern">Feiern</a><a href="#lounge">Lounge</a><a href="#besuch">Besuch</a>
+  </nav>
+  <div class="rechts">
+    <a class="knopf tel" href="tel:+41410000000" aria-label="Anrufen 041 000 00 00"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.8 2z"/></svg><span>041 000 00 00</span></a>
+    <a class="knopf gold" href="#besuch">Reservieren</a>
+  </div>
+</header>
+
+<main>
+<section class="buehne" id="start" aria-label="Willkommen im Uferlicht"></section>
+
+<section class="s-wand putz" id="wand">
+  <picture class="wandfoto">
+    <source media="(max-width:899px)" srcset="img/wand_hoch_900.webp 900w, img/wand_hoch_1536.webp 1536w" sizes="100vw">
+    <img src="img/wand_1600.webp" srcset="img/wand_1600.webp 1600w, img/wand_2752.webp 2752w" sizes="100vw" alt="Bemalte Wand im Uferlicht: Kalkputz mit Weidenzweigen und Schilf, eine Messinglampe" loading="lazy">
+  </picture>
+  <div class="uebergang" aria-hidden="true"></div>
+  <div class="wrap wand-inhalt">
+    <div class="wand-text rise">
+      <p class="kick">Von Hand gemalt</p>
+      <h2>Das alte Hotel Uferlicht lebt an unserer Wand</h2>
+      <p>Der Raddampfer am Steg, die Promenade, Spaziergänger mit Sonnenschirmen: mitten im Saal, von Hand auf die Wand gemalt. Auf dem Kalkputz daneben wachsen Weidenzweige und Schilf, dazwischen leuchten Messinglampen.</p>
+      <ul class="zeiten">
+        <li><b>Zmorge</b><span>ab 08:00, Sa &amp; So ab 09:00</span></li>
+        <li><b>Mittag</b><span>Tagesteller mit Salat</span></li>
+        <li><b>Abend</b><span>Sushi, Pizza und Pasta</span></li>
+        <li><b>Lounge</b><span>bis 23:00, Fr &amp; Sa bis 00:30</span></li>
+      </ul>
+    </div>
+    <div class="details rise">
+      <figure class="detail" data-big="img/detail_hotel.webp"><img src="img/detail_hotel.webp" alt="Ausschnitt aus dem Wandbild: das Hotel Uferlicht" loading="lazy"><figcaption>das Hotel</figcaption></figure>
+      <figure class="detail" data-big="img/detail_dampfer.webp"><img src="img/detail_dampfer.webp" alt="Ausschnitt aus dem Wandbild: Raddampfer am Steg" loading="lazy"><figcaption>der Dampfer</figcaption></figure>
+      <figure class="detail" data-big="img/detail_lampen.webp"><img src="img/detail_lampen.webp" alt="Lampen aus Rauchglas vor dem gemalten Himmel" loading="lazy"><figcaption>die Lampen</figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<section class="s-tag putz" id="tag">
+  <div class="wrap">
+    <div class="rise">
+      <p class="kick">Vom Morgen bis in die Nacht</p>
+      <h2>Ein Tag im Uferlicht</h2>
+    </div>
+    <div class="tag-reihe">
+      <figure class="stunde rise" style="margin:0"><img src="img/zmorge.webp" alt="Kaffeetresen mit Gebäck am Morgen" loading="lazy"><div><small>AB 08:00</small><b>Zmorge</b><p>Kaffee und Gipfeli am Tresen.</p></div></figure>
+      <figure class="stunde rise" style="margin:0"><img src="img/mittag.webp" alt="Heller Saal mit Fenstern zum See" loading="lazy"><div><small>AB 11:30</small><b>Mittag</b><p>Ein Teller, ein Kaffee, Blick auf den See.</p></div></figure>
+      <figure class="stunde rise" style="margin:0"><img src="img/abend.webp" alt="Koch am Pizzaofen" loading="lazy"><div><small>AB 17:30</small><b>Abend</b><p>Sushi, Pizza und Pasta aus der Küche.</p></div></figure>
+      <figure class="stunde rise" style="margin:0"><img src="img/lounge_karte.webp" alt="Barkeeper mixt einen Cocktail" loading="lazy"><div><small>BIS 00:30</small><b>Lounge</b><p>Cocktails und Whisky. Fr &amp; Sa bis halb eins.</p></div></figure>
+    </div>
+  </div>
+</section>
+
+<section class="s-karte putz" id="karte">
+  <div class="wrap">
+    <div class="karte-grid">
+      <div class="karte-links">
+        <div class="rise">
+          <p class="kick">Die Karte</p>
+          <h2>Nehmen Sie einen Schlüssel</h2>
+          <p class="lead">Wie früher im Hotel Uferlicht hängt jeder Schlüssel an seinem Haken. Jeder öffnet ein Zimmer der Karte.</p>
+        </div>
+        <div class="brett rise"><div class="schluessel" id="schluessel" role="group" aria-label="Zimmer der Karte"></div></div>
+      </div>
+      <div class="zimmer rise" id="zimmer" aria-live="polite"></div>
+    </div>
+    <p class="fuss">Musterpreise in CHF – fiktive Angaben.</p>
+  </div>
+</section>
+
+<section class="s-gaeste putz" id="gaeste">
+  <div class="wrap">
+    <div class="gaeste-kopf rise">
+      <div>
+        <p class="kick">Post von Gästen</p>
+        <h2>Grüsse aus dem Uferlicht</h2>
+      </div>
+    </div>
+    <div class="streifen-wrap rise">
+      <button type="button" class="pfeil zurueck" id="pfZ" aria-label="Vorherige Karte"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 5l-7 7 7 7"/></svg></button>
+      <div class="karten" id="karten" aria-label="Postkarten von Gästen"></div>
+      <button type="button" class="pfeil vor" id="pfV" aria-label="Nächste Karte"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 5l7 7-7 7"/></svg></button>
+    </div>
+    <div class="punkte" id="punkte"></div>
+  </div>
+</section>
+
+<section class="s-feiern putz" id="feiern">
+  <div class="wrap">
+    <div class="rise">
+      <p class="kick">Familien und Gruppen</p>
+      <h2>Platz für alle</h2>
+    </div>
+    <div class="feiern-grid ohne-bild">
+      <div class="fkarten">
+        <article class="fk rise">
+          <div class="in">
+            <h3>Mit Kindern</h3>
+            <p>Während die Grossen essen, spielen die Kleinen im Spielzimmer gleich nebenan.</p>
+            <blockquote>Die Kinder waren im Spielzimmer glücklich, und wir konnten in Ruhe essen.<cite>Nicole S., Gästebuch</cite></blockquote>
+          </div>
+        </article>
+        <article class="fk rise">
+          <div class="in">
+            <h3>Gruppen &amp; Feiern</h3>
+            <p>Firmenessen, Geburtstag oder Hochzeit: Für grosse Runden decken wir die lange Tafel am Fenster. Pizza gibt es auch mit 50 cm Durchmesser.</p>
+            <blockquote>Wir haben den 60. Geburtstag meiner Mutter hier gefeiert – lange Tafel, Pizza für alle, Dessert mit Kerze.<cite>Claudia M., Gästebuch</cite></blockquote>
+            <div class="reihe"><a class="knopf gold" href="mailto:hallo@example.ch?subject=Anfrage%20Feier">Anfrage senden</a><a class="knopf" href="tel:+41410000000">Anrufen</a></div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="s-lounge putz tief" id="lounge">
+  <div class="wrap lounge-grid">
+    <div class="raumbild rise" id="raumbild">
+      <img src="img/lounge.webp" srcset="img/lounge_m.webp 1200w, img/lounge.webp 2400w" sizes="(min-width:900px) 62vw, 100vw" alt="Die Lounge im Uferlicht am Abend: Samtsessel, Lampen aus Rauchglas, Fenster zum See" loading="lazy">
+      <div class="blase" id="blase"></div>
+    </div>
+    <div class="rise">
+      <p class="kick">Am Abend</p>
+      <h2>Die Lounge</h2>
+      <p class="lead">Tippen Sie auf die Lichter im Bild. Am Abend: Cocktails, Whisky und Bier vom Fass, bis 23 Uhr, am Freitag und Samstag bis halb eins.</p>
+      <ul class="bar-liste">
+        <li><b>Cocktails</b><span>Spritz, Hugo, Negroni</span></li>
+        <li><b>Whisky</b><span>aus Schottland und Japan</span></li>
+        <li><b>Bier vom Fass</b><span>aus der Region</span></li>
+        <li><b>Wein</b><span>offen und in Flaschen</span></li>
+      </ul>
+      <div class="mini">
+        <button type="button" data-big="img/drink_whisky.webp"><img src="img/drink_whisky.webp" alt="Whisky im Kristallglas" loading="lazy"></button>
+        <button type="button" data-big="img/drink_cocktail.webp"><img src="img/drink_cocktail.webp" alt="Cocktail an der Bar" loading="lazy"></button>
+        <button type="button" data-big="img/drink_bier.webp"><img src="img/drink_bier.webp" alt="Bier vom Fass" loading="lazy"></button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="s-besuch putz tief" id="besuch">
+  <div class="wrap">
+    <div class="besuch-kopf rise">
+      <p class="kick">Besuch</p>
+      <h2>Bis bald im Uferlicht</h2>
+    </div>
+    <div class="abschied">
+      <figure class="pk-vorn rise" data-big="img/terrasse.webp">
+        <img src="img/terrasse.webp" srcset="img/terrasse_m.webp 900w, img/terrasse.webp 1600w" sizes="(min-width:900px) 45vw, 100vw" alt="Die Terrasse am See" loading="lazy">
+        <figcaption>Zug · Am Uferweg 7</figcaption>
+      </figure>
+      <article class="pk-hinten rise">
+        <div class="ph-links">
+          <p class="ph-gruss">Wir freuen uns auf Sie!</p>
+          <div class="tage" id="tage" role="group" aria-label="Wochentag wählen"></div>
+          <p class="tg" id="zTag">Heute</p>
+          <p class="h" id="zH">08:00 – 23:00</p>
+          <p class="ph-klein"><b>Abholung</b> ab 11:30 · <b>Tisch</b> per Telefon oder E-Mail</p>
+        </div>
+        <div class="ph-rechts">
+          <div class="ph-oben"><span class="pm gross"><span>6300</span><b>Zug</b><span>am See</span></span><span class="mk gross"><div><span class="logo"><b>UFERLICHT</b></span>ZUG</div></span></div>
+          <address class="ph-adr">Uferlicht Restaurant • Lounge<br>Am Uferweg 7<br>6300 Zug<br><a href="tel:+41410000000">041 000 00 00</a><br><a href="mailto:hallo@example.ch">hallo@example.ch</a></address>
+        </div>
+      </article>
+    </div>
+    <div class="reihe knoepfe rise">
+      <a class="knopf gold" href="mailto:hallo@example.ch?subject=Tisch%20reservieren">Tisch reservieren</a>
+      <a class="knopf" href="tel:+41410000000">Anrufen</a>
+      <a class="knopf" href="https://www.google.com/maps/search/?api=1&query=Zug%2C+Zugersee" target="_blank" rel="noopener">Route planen</a>
+    </div>
+    <ul class="weg rise">
+      <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="5" y="3" width="14" height="14" rx="3"/><path d="M5 11h14M9 21l-2-4M15 21l2-4"/></svg><span><b>Zug</b>Bahnhof Zug, zehn Minuten zu Fuss</span></li>
+      <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 17c2 1.5 4 1.5 6 0s4-1.5 6 0 4 1.5 6 0M5 14l1-5h12l1 5M9 9V5h6v4"/></svg><span><b>Schiff</b>Schiffsteg direkt vor dem Haus</span></li>
+      <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 16h14l-1.5-5.5A2 2 0 0 0 15.6 9H8.4a2 2 0 0 0-1.9 1.5zM5 16v3M19 16v3"/><circle cx="8" cy="16" r="1.5"/><circle cx="16" cy="16" r="1.5"/></svg><span><b>Auto</b>Parkhaus in der Nähe</span></li>
+    </ul>
+    <p class="klein">Bezahlen mit TWINT, Karte oder bar.</p>
+  </div>
+</section>
+</main>
+
+<footer><div class="wrap"><span class="logo" aria-hidden="true"><b>UFERLICHT</b><small>RESTAURANT · LOUNGE</small></span><span>Musterentwurf – Namen und Angaben fiktiv. Alle Fotos sind Symbolbilder.</span><span class="fiktiv">fiktive Angaben</span></div></footer>
+<div class="lb" id="lb" role="dialog" aria-modal="true" aria-label="Bild gross"><img id="lbImg" alt=""><button type="button" aria-label="Schliessen">×</button></div>
+
+<template id="tA">
+  <div class="szene">
+    <picture>
+      <source media="(max-width:899px)" srcset="img/wandbild_abend_hoch_900.webp 900w, img/wandbild_abend_hoch_1536.webp 1536w" sizes="100vw">
+      <img class="bild b2" src="img/wandbild_abend_1600.webp" srcset="img/wandbild_abend_1600.webp 1600w, img/wandbild_abend_2752.webp 2752w" sizes="100vw" alt="Am Abend im Uferlicht: das Wandbild mit der alten Seepromenade und dem Hotel Uferlicht" fetchpriority="high">
+    </picture>
+    <picture>
+      <source media="(max-width:899px)" srcset="img/durchgang_hoch_900.webp 900w, img/durchgang_hoch_1536.webp 1536w" sizes="100vw">
+      <img class="bild b1" src="img/durchgang_1600.webp" srcset="img/durchgang_1600.webp 1600w, img/durchgang_2752.webp 2752w" sizes="100vw" alt="Durchgang in der bemalten Wand mit Weidenzweigen, dahinter das Wandbild der Seepromenade" fetchpriority="high">
+    </picture>
+    <div class="eintritt"><b>Treten Sie ein.</b><span>Am Uferweg 7 · Zug</span></div>
+  </div>
+  <div class="vorhang"></div>
+</template>
+<template id="tGemeinsam">
+  <div class="schleier"></div>
+  <div class="nachher">
+    <p class="kick">Restaurant · Lounge · Bar</p>
+    <h1>Willkommen im Uferlicht</h1>
+    <p>Direkt am Zugersee: Zmorge ab 8 Uhr, abends Sushi, Pizza und Pasta, am Wochenende Lounge bis halb eins.</p>
+    <div class="reihe">
+      <a class="knopf gold" href="#besuch">Tisch reservieren</a>
+      <a class="knopf" href="#karte">Zur Karte</a>
+    </div>
+  </div>
+  <div class="fusszeile"><a href="#besuch">Am Uferweg 7<span class="lang">, direkt am See</span></a><a href="tel:+41410000000">041 000 00 00</a></div>
+  <div class="hinweis" aria-hidden="true"><span>Scrollen</span><i></i></div>
+</template>
+
+<script>
+(function(){
+"use strict";
+var D=document,W=window;
+var reduce=W.matchMedia('(prefers-reduced-motion: reduce)').matches;
+try{history.scrollRestoration='manual'}catch(e){}
+function $(id){return D.getElementById(id)}
+
+/* ================= Bühne (Variante A/B) ================= */
+var B=$('start'), kopf=$('kopf');
+B.classList.add('va');
+B.appendChild($('tA').content.cloneNode(true));
+B.appendChild($('tGemeinsam').content.cloneNode(true));
+function ease(t){return 1-(1-t)*(1-t)}
+var state='ruhe', raf=0;
+function lauf(dauer,frame,done){var t0=performance.now();function step(ts){var t=Math.min(1,(ts-t0)/dauer);frame(ease(t));if(t<1)raf=requestAnimationFrame(step);else done()}raf=requestAnimationFrame(step)}
+function frameA(e){
+  var mob=W.innerWidth<900,b1=B.querySelector('.b1'),b2=B.querySelector('.b2');
+  var s1=1+(mob?0.95:1.25)*e, f=Math.min(1,Math.max(0,(e-0.5)/0.32));
+  b1.style.transformOrigin=mob?'57% 47%':'50% 46%';
+  b1.style.transform='scale('+s1.toFixed(4)+')';b1.style.opacity=(1-f).toFixed(3);
+  b2.style.transform='scale('+(1.14-0.14*e).toFixed(4)+')';
+  var et=B.querySelector('.eintritt');et.style.opacity=Math.max(0,1-e*2.4).toFixed(3);
+  var vh=B.querySelector('.vorhang');if(vh)vh.style.opacity=Math.max(0,1-e*1.6).toFixed(3);
+  if(e>=.7)B.classList.add('auf');
+}
+function start(){
+  hinweisWeg();
+  if(state!=='ruhe')return;state='lauf';B.classList.add('lauf');
+  var fr=frameA;
+  lauf(reduce?1:850,fr,function(){state='fertig';B.classList.remove('lauf');B.classList.add('fertig');fr(1)});
+}
+function sofort(){if(state==='fertig')return;cancelAnimationFrame(raf);state='fertig';B.classList.remove('lauf');B.classList.add('fertig');frameA(1)}
+function oben(){return W.scrollY<=2}
+var mk=$('mkHinweis'),mkWeg=!mk;
+function mkLage(){if(mkWeg)return;var h=mk.offsetHeight;kopf.style.transform='translateY('+h+'px)'}
+function hinweisWeg(){if(mkWeg)return;mkWeg=true;mk.classList.add('weg');kopf.style.transform='translateY(0)'}
+mkLage();W.addEventListener('resize',mkLage);
+W.addEventListener('wheel',function(e){if(e.deltaY>0)hinweisWeg();if(state==='lauf'){e.preventDefault();return}if(state==='ruhe'&&oben()&&e.deltaY>0){e.preventDefault();start()}},{passive:false});
+var ty=null,gl=false;
+W.addEventListener('touchstart',function(e){ty=e.touches[0].clientY;gl=(state!=='fertig'&&oben())},{passive:true});
+W.addEventListener('touchmove',function(e){if(state==='lauf'){e.preventDefault();return}if(!gl||ty===null)return;var d=ty-e.touches[0].clientY;if(state==='ruhe'){e.preventDefault();if(d>6)start()}},{passive:false});
+W.addEventListener('touchend',function(){ty=null;gl=false},{passive:true});
+W.addEventListener('keydown',function(e){var k=e.key;if(!(k==='ArrowDown'||k==='PageDown'||k===' '||k==='End'))return;if(state==='lauf'){e.preventDefault();return}if(state==='ruhe'&&oben()){e.preventDefault();start()}});
+var sprung=false;
+W.addEventListener('scroll',function(){
+  if(W.scrollY>4)hinweisWeg();
+  if(state!=='fertig'&&W.scrollY>2&&!sprung){W.scrollTo(0,0);start()}
+  kopf.classList.toggle('hell',W.scrollY>B.offsetHeight-kopf.offsetHeight-12);
+},{passive:true});
+function geheZu(id){var el=$(id);if(!el)return;sprung=true;sofort();el.scrollIntoView({behavior:reduce?'auto':'smooth'});setTimeout(function(){sprung=false},1400)}
+D.addEventListener('click',function(e){var a=e.target.closest&&e.target.closest('a[href^="#"]');if(!a)return;var id=a.getAttribute('href').slice(1);e.preventDefault();if(id==='start'){W.scrollTo({top:0,behavior:'smooth'});return}geheZu(id)});
+W.addEventListener('hashchange',function(){var h=location.hash.slice(1);if(h&&h!=='start')geheZu(h)});
+if(reduce||location.hash.length>1){sofort();if(location.hash.length>1){var h0=location.hash.slice(1);setTimeout(function(){geheZu(h0)},60)}}else W.scrollTo(0,0);
+
+/* ================= Einblenden ================= */
+var rs=[].slice.call(D.querySelectorAll('.rise'));
+if('IntersectionObserver' in W&&!reduce){
+  var io=new IntersectionObserver(function(es){es.forEach(function(en){if(en.isIntersecting){en.target.classList.add('shown');io.unobserve(en.target)}})},{rootMargin:'0px 0px -6% 0px',threshold:.01});
+  rs.forEach(function(el){io.observe(el)});
+}else rs.forEach(function(el){el.classList.add('shown')});
+
+/* ================= Karte: Schlüsselbrett ================= */
+// Musterpreise, fiktiv
+var KARTE=[
+ {n:'Zmorge & Café',img:'menu_zmorge',alt:'Cappuccino und Gipfeli',note:'Ab 08:00, Samstag und Sonntag ab 09:00.',q:['Der Cappuccino am Fenster ist mein liebster Start in den Tag.','Claudia M.'],it:[
+  ['Gipfeli & Cappuccino','am Tresen oder zum Mitnehmen','7.50'],['Zmorge-Teller','Brot, Butter, Konfitüre, Bergkäse','16.–'],['Birchermüesli','mit Beeren','9.50',1],['Iced Matcha Latte','auch mit Hafermilch','6.80'],['Kuchen aus der Vitrine','je nach Tag','ab 5.–']]},
+ {n:'Sushi',img:'menu_sushi',alt:'Sushi-Rollen auf dunklem Teller',note:'Rollen frisch gerollt, auch zum Mitnehmen.',q:['Die Crispy Ebi Roll bestelle ich jedes Mal.','Thomas R.'],it:[
+  ['Lachs-Avocado Roll','8 Stück','19.–'],['Crispy Ebi Roll','8 Stück · knusprige Crevette, Avocado','21.–',1],['Spicy Tuna Roll','8 Stück, scharf','22.–'],['Flambierte Lachsrolle','8 Stück','22.–'],
+  ['Vegi Futomaki','10 Stück, vegetarisch','17.–'],['Lachs-Maki','6 Stück','10.–'],['Avocado-Maki','6 Stück','9.–'],['Gurken-Maki','6 Stück','8.–'],
+  ['Uferlicht-Platte','24 Stück für zwei','54.–'],['Edamame','mit Meersalz','7.–'],['Wakame-Salat','mit Sesam','9.–'],['Poke Bowl Lachs','','19.–']]},
+ {n:'Pizza',img:'menu_pizza',alt:'Pizza aus dem Ofen',note:'Dünn und knusprig aus dem Ofen, für den Tisch auch mit 50 cm.',q:['Hauchdünner Boden, frisch aus dem Ofen.','Reto B.'],it:[
+  ['Margherita','','17.–'],['Salame','','20.–'],['Prosciutto e Funghi','','22.–'],['Tonno e Cipolla','','21.–'],['Diavola','scharf','22.–'],['Vegana','mit Gemüse vom Markt','20.–'],['Pizza Ø 50 cm','für den ganzen Tisch','ab 39.–',1]]},
+ {n:'Pasta',img:'menu_pasta',alt:'Tagliatelle mit Bolognese',note:'Pasta frisch gekocht, auf Wunsch glutenfrei.',it:[
+  ['Spaghetti Pomodoro','','18.–'],['Tagliatelle Bolognese','','22.–',1],['Penne Arrabbiata','scharf','19.–'],['Lasagne al forno','','23.–']]},
+ {n:'Burger & Bowls',img:'menu_burger',alt:'Burger mit Pommes',note:'Alle Burger mit Pommes oder Salat.',q:['Der Veggie Burger ist ein Gedicht.','Lukas W.'],it:[
+  ['Classic Burger','','21.–'],['Cheeseburger','','22.–'],['Chicken Burger','','22.–'],['Veggie Burger','','20.–',1],['Poke Bowl Poulet','','19.–'],['Süsskartoffel-Pommes','','8.–'],['Gemischter Salat','Hausdressing','9.–']]},
+ {n:'Bar',img:'menu_bar',alt:'Cocktail an der Bar',note:'Bis 23:00, Freitag und Samstag bis 00:30.',q:['Spritz bei Sonnenuntergang – besser geht es nicht.','Sabine K.'],it:[
+  ['Aperol Spritz','','12.–',1],['Hugo','','12.–'],['Negroni','','15.–'],['Whisky','Schottland und Japan','ab 12.–'],['Bier vom Fass','3 dl','5.–'],['Wein im Glas','offen','ab 7.–'],['Espresso','','4.20']]}
+];
+var brett=$('schluessel'),zimmer=$('zimmer'),aktiv=1,seite=0,PRO=W.innerWidth>=900?6:8;
+KARTE.forEach(function(c,i){
+  var b=D.createElement('button');b.type='button';b.className='sl';b.dataset.i=i;b.setAttribute('aria-pressed',i===aktiv?'true':'false');
+  b.innerHTML='<span class="haken"></span><span class="anh"><span class="ring"></span><span class="fob"><i>'+(i+1)+'</i><em>UFER</em></span></span><span class="name">'+c.n.replace('&','&amp;')+'</span>';
+  brett.appendChild(b);
+});
+function esc(s){return s.replace(/&(?!amp;)/g,'&amp;')}
+function zeig(i,pg){
+  if(i!==aktiv||pg===undefined)seite=0;if(pg!==undefined)seite=pg;aktiv=i;var c=KARTE[i];
+  [].forEach.call(brett.children,function(b){b.setAttribute('aria-pressed',+b.dataset.i===i?'true':'false')});
+  var seiten=Math.ceil(c.it.length/PRO);
+  zimmer.innerHTML=(c.img?'<figure data-big="img/'+c.img+'.webp"><img src="img/'+c.img+'.webp" alt="'+c.alt+'" loading="lazy"><figcaption>Zimmer '+(i+1)+'</figcaption></figure>':'<figure class="schild" aria-hidden="true"><div><i>'+(i+1)+'</i><b>'+esc(c.n)+'</b><em>Uferlicht</em></div></figure>')+
+   '<div class="liste"><div class="kopfz"><span class="nr">Zimmer '+(i+1)+'</span><h3>'+esc(c.n)+'</h3><p class="note">'+c.note+'</p></div>'+
+   (seiten>1?'<div class="seiten" role="group" aria-label="Seiten">'+Array.apply(null,{length:seiten}).map(function(_,n){return '<button type="button" data-pg="'+n+'" aria-pressed="'+(n===seite)+'">'+(n*PRO+1)+(Math.min(c.it.length,n*PRO+PRO)>n*PRO+1?'–'+Math.min(c.it.length,n*PRO+PRO):'')+'</button>'}).join('')+'<span>von '+c.it.length+'</span></div>':'')+
+   (c.q?'<div class="tipp"><span>Gäste schreiben</span>«'+c.q[0]+'»<cite>'+c.q[1]+', Gästebuch</cite></div>':'')+
+   c.it.slice(seite*PRO,seite*PRO+PRO).map(function(p){return '<div class="pos"><b>'+esc(p[0])+(p[3]===1?' <em class="gt">Gäste-Tipp</em>':'')+'</b>'+(p[1]?'<small>'+p[1]+'</small>':'')+'<span class="pr'+(p[3]===2||/[A-Za-zØ]/.test(p[2].replace('ab ',''))?' s':'')+'">'+p[2]+'</span></div>'}).join('')+
+   ''+'</div>';
+}
+brett.addEventListener('click',function(e){var b=e.target.closest('.sl');if(b)zeig(+b.dataset.i)});
+zimmer.addEventListener('click',function(e){var pb=e.target.closest('.seiten button');if(pb){zeig(aktiv,+pb.dataset.pg);return}var p=e.target.closest('.pos');if(!p)return;[].forEach.call(zimmer.querySelectorAll('.pos.tap'),function(x){if(x!==p)x.classList.remove('tap')});p.classList.toggle('tap')});
+zeig(1);
+if('IntersectionObserver' in W&&!reduce){var io2=new IntersectionObserver(function(es){if(es[0].isIntersecting){[].forEach.call(brett.children,function(b,i){setTimeout(function(){b.classList.add('zu')},120*i)});io2.disconnect()}},{threshold:.4});io2.observe(brett)}
+
+/* ================= Lounge: Lichter im Bild ================= */
+var PUNKTE=[
+ [53,16,'Lampen aus Rauchglas','Über jedem Tisch ein warmes Licht.'],
+ [30,36,'Der See vor dem Fenster','Am Abend sieht man die Lichter am anderen Ufer.'],
+ [36,63,'Samtsessel','Tiefe Sessel in Dunkelgrün für den langen Abend.'],
+ [62,66,'Spritz am Tisch','Der Klassiker zum Sonnenuntergang.'],
+ [86,58,'Chesterfield','Ein Sofa zum Versinken, unter den Messingleuchten.']
+];
+var rb=$('raumbild'),blase=$('blase');
+PUNKTE.forEach(function(p,i){var b=D.createElement('button');b.type='button';b.className='punkt';b.style.left=p[0]+'%';b.style.top=p[1]+'%';b.setAttribute('aria-label',p[2]);b.setAttribute('aria-pressed','false');b.dataset.i=i;rb.appendChild(b)});
+function zeigPunkt(i){
+  var p=PUNKTE[i];[].forEach.call(rb.querySelectorAll('.punkt'),function(b){b.setAttribute('aria-pressed',+b.dataset.i===i?'true':'false')});
+  blase.innerHTML='<b>'+p[2]+'</b>'+p[3];
+  var w=rb.clientWidth,h=rb.clientHeight,x=p[0]/100*w,y=p[1]/100*h,bw=Math.min(250,w-24);
+  blase.style.maxWidth=bw+'px';
+  var left=Math.min(Math.max(12,x-bw/2),w-bw-12),top=y+24;if(top+90>h)top=y-110;
+  blase.style.left=left+'px';blase.style.top=Math.max(8,top)+'px';blase.classList.add('an');
+}
+rb.addEventListener('click',function(e){var b=e.target.closest('.punkt');if(b){e.stopPropagation();zeigPunkt(+b.dataset.i)}else{blase.classList.remove('an');[].forEach.call(rb.querySelectorAll('.punkt'),function(x){x.setAttribute('aria-pressed','false')})}});
+if(W.matchMedia('(hover:hover)').matches){rb.addEventListener('mouseover',function(e){var b=e.target.closest('.punkt');if(b)zeigPunkt(+b.dataset.i)})}
+if('IntersectionObserver' in W&&!reduce){var io3=new IntersectionObserver(function(es){if(es[0].isIntersecting){[].forEach.call(rb.querySelectorAll('.punkt'),function(b,i){setTimeout(function(){b.classList.add('puls')},300*i)});io3.disconnect()}},{threshold:.5});io3.observe(rb)}
+
+/* ================= Gäste: Postkarten ================= */
+var POST=[
+ ['Sabine K.','vor 2 Wochen',5,'Ein wunderschöner Abend direkt am Wasser. Das Wandbild mit dem alten Dampfer hat uns sofort verzaubert, und der Service war herzlich und aufmerksam.'],
+ ['Marco L.','vor 1 Monat',5,'Mittagspause mit Seeblick: Der Tagesteller stand nach zehn Minuten auf dem Tisch, frisch und gut gewürzt. Ich komme jede Woche wieder.'],
+ ['Claudia M.','vor 2 Monaten',5,'Wir haben den 60. Geburtstag meiner Mutter hier gefeiert. Lange Tafel, Pizza für alle und zum Schluss ein Dessert mit Kerze – herzlichen Dank!'],
+ ['Thomas R.','vor 3 Monaten',5,'Das beste Sushi am Zugersee. Die Crispy Ebi Roll ist ein Muss, dazu ein Glas Weisswein auf der Terrasse.'],
+ ['Nicole S.','vor 4 Monaten',5,'Die Kinder waren im Spielzimmer glücklich, und wir konnten in Ruhe essen. Familienfreundlich und trotzdem stilvoll.'],
+ ['Reto B.','vor 5 Monaten',5,'Nach dem Konzert noch in die Lounge: weiche Sessel, gute Musik, ein perfekter Negroni. Und bis halb eins offen!'],
+ ['Barbara H.','vor 6 Monaten',5,'Zmorge am Sonntag mit Blick auf die Schiffe. Frische Gipfeli, guter Kaffee, ein freundliches Team.'],
+ ['Lukas W.','vor 8 Monaten',5,'Mit dem Schiff angekommen, zwei Minuten zu Fuss bis zum Tisch. Die Pasta war hausgemacht und richtig gut.']
+];
+var karten=$('karten'),punkte=$('punkte'),pfZ=$('pfZ'),pfV=$('pfV');
+function sterne(n){return '★★★★★'.slice(0,n)}
+karten.innerHTML=POST.map(function(p){
+  return '<article class="pk"><div class="links"><p class="anrede">Liebes Uferlicht,</p><div class="text">'+p[3]+'</div><p class="gez">– '+p[0]+'</p></div>'+
+   '<div class="rechts"><span class="mk"><div><b>'+sterne(p[2])+'</b>GÄSTE</div></span><span class="pm"><span>'+p[1].toUpperCase()+'</span><b>Zug</b><span>6300</span></span>'+
+   '<span class="adr">Uferlicht<br>Am Uferweg 7<br>6300 Zug</span></div></article>';
+}).join('');
+POST.forEach(function(_,i){var b=D.createElement('button');b.type='button';b.setAttribute('aria-label','Karte '+(i+1));b.dataset.i=i;punkte.appendChild(b)});
+function schritt(){var c=karten.querySelector('.pk');var g=parseFloat(getComputedStyle(karten).columnGap)||16;return c?c.getBoundingClientRect().width+g:300}
+var gleitet=false;
+function gleite(ziel){
+  var start=karten.scrollLeft,max=karten.scrollWidth-karten.clientWidth;ziel=Math.max(0,Math.min(max,ziel));
+  if(Math.abs(ziel-start)<2)return;gleitet=true;karten.style.scrollSnapType='none';var t0=performance.now();
+  function f(ts){var t=Math.min(1,(ts-t0)/(reduce?1:520)),e=1-Math.pow(1-t,3);karten.scrollLeft=start+(ziel-start)*e;if(t<1)requestAnimationFrame(f);else{karten.style.scrollSnapType='';gleitet=false;lage()}}
+  requestAnimationFrame(f);
+}
+function lage(){
+  var st=schritt(),i=Math.round(karten.scrollLeft/st),max=karten.scrollWidth-karten.clientWidth;
+  pfZ.disabled=karten.scrollLeft<4;pfV.disabled=karten.scrollLeft>max-4;
+  [].forEach.call(punkte.children,function(b,k){b.setAttribute('aria-current',k===i?'true':'false')});
+}
+pfZ.addEventListener('click',function(){gleite(Math.round(karten.scrollLeft/schritt()-1)*schritt())});
+pfV.addEventListener('click',function(){gleite(Math.round(karten.scrollLeft/schritt()+1)*schritt())});
+punkte.addEventListener('click',function(e){var b=e.target.closest('button');if(b)gleite(+b.dataset.i*schritt())});
+var lr=0;karten.addEventListener('scroll',function(){if(!lr)lr=requestAnimationFrame(function(){lr=0;lage()})},{passive:true});
+W.addEventListener('resize',lage);lage();
+
+/* ================= Öffnungszeiten ================= */
+var ZEIT={1:[8,23],2:[8,23],3:[8,23],4:[8,23],5:[8,24.5],6:[9,24.5],0:[9,22]};
+var TN=['So','Mo','Di','Mi','Do','Fr','Sa'],TL=['Sonntag','Montag','Dienstag','Mittwoch','Donnerstag','Freitag','Samstag'];
+function hh(h){h=((h%24)+24)%24;var H=Math.floor(h),M=Math.round((h-H)*60);return (H<10?'0':'')+H+':'+(M<10?'0':'')+M}
+var heute=new Date(new Date().toLocaleString('en-US',{timeZone:'Europe/Zurich'})).getDay(),tage=$('tage');
+[1,2,3,4,5,6,0].forEach(function(d){var b=D.createElement('button');b.type='button';b.textContent=TN[d];b.dataset.d=d;b.setAttribute('aria-label',TL[d]);tage.appendChild(b)});
+function zeigTag(d){[].forEach.call(tage.children,function(b){b.setAttribute('aria-pressed',+b.dataset.d===d?'true':'false')});$('zTag').textContent=(d===heute?'Heute, ':'')+TL[d];var z=ZEIT[d];$('zH').textContent=hh(z[0])+' – '+hh(z[1])}
+tage.addEventListener('click',function(e){var b=e.target.closest('button');if(b)zeigTag(+b.dataset.d)});
+zeigTag(heute);
+
+/* ================= Lightbox ================= */
+var lb=$('lb'),lbImg=$('lbImg');
+D.addEventListener('click',function(e){var el=e.target.closest('[data-big]');if(!el)return;var im=el.querySelector('img');lbImg.src=el.dataset.big;lbImg.alt=im?im.alt:'';lb.classList.add('offen')});
+lb.addEventListener('click',function(e){if(e.target!==lbImg)lb.classList.remove('offen')});
+D.addEventListener('keydown',function(e){if(e.key==='Escape')lb.classList.remove('offen')});
+})();
+</script>
+</body>
+</html>

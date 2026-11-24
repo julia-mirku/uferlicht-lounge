@@ -24,13 +24,14 @@
   --nacht:#1e2925; --nacht2:#18211e; --rosa:#d9c7d6; --creme:#f4f1e8; --blau:#2f4b5a;
   --serif:"Gilda Display", Georgia, serif; --text:"Source Sans 3", system-ui, -apple-system, sans-serif; --hand:"Cedarville Cursive", cursive;
   --hh:64px; color-scheme:light;
+  --putzbild:url(img/putz_wand.webp); --putzdunkel:url(img/putz_wand_dunkel.webp); --kachel:340px;
   --papier:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='220' height='220'%3E%3Cfilter id='p'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 .45 0 0 0 0 .4 0 0 0 0 .35 0 0 0 .09 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23p)'/%3E%3C/svg%3E");
   --noise:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='320' height='320'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 .54 0 0 0 0 .49 0 0 0 0 .42 0 0 0 .55 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
   --wolken:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='900' height='900'%3E%3Cfilter id='m'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.012' numOctaves='4' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 .6 0 0 0 0 .54 0 0 0 0 .45 0 0 0 .5 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23m)'/%3E%3C/svg%3E");
 }
 *,*::before,*::after{box-sizing:border-box}
 html{-webkit-text-size-adjust:100%;overflow-x:clip;scrollbar-gutter:stable;overscroll-behavior-y:none}
-body{margin:0;background:var(--putz);color:var(--tinte);font:17px/1.6 var(--text);font-weight:400;overflow-x:clip;-webkit-tap-highlight-color:transparent;touch-action:manipulation}
+body{margin:0;background:var(--putz) var(--putzbild) 0 0/var(--kachel) repeat;color:var(--tinte);font:17px/1.6 var(--text);font-weight:400;overflow-x:clip;-webkit-tap-highlight-color:transparent;touch-action:manipulation}
 img{display:block;max-width:100%}
 a{color:inherit}
 button{font:inherit;color:inherit}
@@ -42,12 +43,8 @@ h2{font:400 clamp(38px,9.5vw,74px)/1 var(--serif);letter-spacing:-.01em;margin:0
 .lead{font-size:18px;line-height:1.6;color:#36302b;max-width:46ch;margin:0 0 24px}
 .hand{font-family:var(--hand);font-weight:400}
 section{position:relative;scroll-margin-top:calc(var(--hh) + env(safe-area-inset-top) - 1px)}
-.putz{background:var(--putz)}
-.putz::before,.putz::after{content:"";position:absolute;inset:0;pointer-events:none;mix-blend-mode:multiply}
-.putz::before{background-image:var(--noise);opacity:.5}
-.putz::after{background-image:var(--wolken);opacity:.55}
-.putz.tief::before{mix-blend-mode:soft-light;opacity:.7}
-.putz.tief::after{mix-blend-mode:soft-light;opacity:.8}
+.putz{background:transparent}
+.putz::before,.putz::after{content:none}
 .putz>*{position:relative;z-index:1}
 .rise{opacity:0;transform:translateY(22px);transition:opacity .8s ease,transform .8s ease}
 .rise.shown{opacity:1;transform:none}
@@ -155,7 +152,7 @@ section{position:relative;scroll-margin-top:calc(var(--hh) + env(safe-area-inset
 .zimmer figure{margin:0;position:relative;aspect-ratio:16/10;overflow:hidden;background:var(--putz3);cursor:zoom-in}
 .zimmer figure img{width:100%;height:100%;object-fit:cover}
 .zimmer figure figcaption{position:absolute;left:12px;bottom:10px;font:400 15px/1.3 var(--hand);color:#fff;text-shadow:0 1px 8px rgba(0,0,0,.6)}
-.zimmer figure.schild{cursor:default;display:grid;place-items:center;background-color:var(--putz);background-image:var(--noise),var(--wolken);background-blend-mode:multiply}
+.zimmer figure.schild{cursor:default;display:grid;place-items:center;background:var(--putz) var(--putzbild) 0 0/var(--kachel) repeat}
 .schild div{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:4px;width:138px;height:176px;border-radius:69px/88px;background:radial-gradient(120% 80% at 30% 20%,#f6e2a6 0,#d8b25a 38%,#a9822f 70%,#7c5d1c 100%);box-shadow:0 16px 30px rgba(30,40,50,.35),inset 0 0 0 3px rgba(255,240,200,.35),inset 0 -6px 12px rgba(80,50,10,.35)}
 .schild i{font:normal 400 60px/1 var(--serif);color:#5a4012;text-shadow:0 1px 0 rgba(255,240,200,.65),0 -1px 0 rgba(60,40,5,.45)}
 .schild b{font:600 11px/1.25 var(--text);letter-spacing:.14em;text-transform:uppercase;color:#5a4012;text-align:center;max-width:110px}
@@ -184,7 +181,7 @@ section{position:relative;scroll-margin-top:calc(var(--hh) + env(safe-area-inset
 .fuss{font-size:13px;color:var(--sepia);margin:12px 2px 0}
 
 /* ===== Lounge ===== */
-.s-lounge{padding:44px 0 28px;background:linear-gradient(180deg,#535a49 0,#343e36 24px,var(--nacht) 48px,var(--nacht) 100%);color:var(--creme)}
+.s-lounge{padding:44px 0 28px;background:linear-gradient(180deg,rgba(103,100,82,.94) 0,rgba(103,100,82,0) 48px),var(--putzdunkel) 0 0/var(--kachel) repeat #28332e;color:var(--creme)}
 .s-lounge .kick{color:var(--gold-l)}
 .s-lounge .lead{color:rgba(247,241,231,.78)}
 .lounge-grid{display:grid;gap:26px}
@@ -239,7 +236,7 @@ section{position:relative;scroll-margin-top:calc(var(--hh) + env(safe-area-inset
 @media (hover:hover){.score a:hover{border-color:var(--gold);box-shadow:0 0 0 4px rgba(220,187,115,.18)}}
 
 /* ===== Feiern ===== */
-.s-feiern{padding:28px 0 20px;background:linear-gradient(180deg,var(--putz) 0,var(--putz) calc(100% - 76px),#8f8a6f calc(100% - 34px),#5f6553 100%)}
+.s-feiern{padding:28px 0 20px;background:linear-gradient(180deg,rgba(30,41,37,0) 0,rgba(30,41,37,0) calc(100% - 76px),rgba(30,41,37,.28) calc(100% - 34px),rgba(30,41,37,.55) 100%)}
 .feiern-grid{display:grid;gap:16px;margin-top:22px}
 .fbild{margin:0;position:relative;border-radius:6px;overflow:hidden;aspect-ratio:4/3;background:var(--putz3);box-shadow:0 18px 40px rgba(30,40,50,.2);cursor:zoom-in}
 .fbild img{width:100%;height:100%;object-fit:cover;object-position:50% 60%}
@@ -258,7 +255,7 @@ section{position:relative;scroll-margin-top:calc(var(--hh) + env(safe-area-inset
 .zimmer,.fk,.pk,.pk-vorn,.pk-hinten{background-image:var(--papier)}
 
 /* ===== Besuch: Postkarte zum Abschied ===== */
-.s-besuch{padding:28px 0 40px;background:linear-gradient(180deg,var(--nacht) 0,var(--nacht2) 100%);color:var(--creme)}
+.s-besuch{padding:28px 0 40px;background:linear-gradient(180deg,rgba(18,27,24,0) 0,rgba(18,27,24,.35) 100%),var(--putzdunkel) 0 0/var(--kachel) repeat #28332e;color:var(--creme)}
 .s-besuch .kick{color:var(--gold-l)}
 .abschied{display:grid;gap:16px;margin-top:20px}
 .pk-vorn{position:relative;margin:0;padding:12px 12px 44px;background:#fbf7ef;border-radius:3px;box-shadow:0 2px 3px rgba(0,0,0,.25),0 24px 50px rgba(0,0,0,.45);transform:rotate(-1.2deg);cursor:zoom-in;transition:transform .35s ease}
@@ -295,7 +292,7 @@ section{position:relative;scroll-margin-top:calc(var(--hh) + env(safe-area-inset
 .weg b{display:block;font-weight:600}
 .weg span{font-size:14px;color:rgba(247,241,231,.78)}
 .s-besuch .klein{font-size:13.5px;color:rgba(247,241,231,.62);margin:6px 0 0}
-footer{background:var(--nacht2);color:rgba(247,241,231,.6);font-size:13.5px;padding:22px 0 calc(22px + env(safe-area-inset-bottom));border-top:1px solid rgba(247,241,231,.08)}
+footer{background:linear-gradient(rgba(18,27,24,.45),rgba(18,27,24,.45)),var(--putzdunkel) 0 0/var(--kachel) repeat #222c28;color:rgba(247,241,231,.6);font-size:13.5px;padding:22px 0 calc(22px + env(safe-area-inset-bottom));border-top:1px solid rgba(247,241,231,.08)}
 footer .wrap{display:flex;flex-wrap:wrap;gap:8px 24px;justify-content:space-between;align-items:center}
 footer .logo{color:var(--creme)}
 footer .fiktiv{display:inline-block;padding:3px 9px;border:1px solid rgba(244,241,232,.35);border-radius:999px;font-size:12px;letter-spacing:.04em}
@@ -334,9 +331,9 @@ footer .fiktiv{display:inline-block;padding:3px 9px;border:1px solid rgba(244,24
 @media (min-width:600px) and (max-width:899px){
   .s-tag{padding:64px 0 36px}
   .s-karte{padding:36px 0 28px}
-  .s-lounge{padding:56px 0 36px;background:linear-gradient(180deg,#535a49 0,#343e36 30px,var(--nacht) 60px,var(--nacht) 100%)}
+  .s-lounge{padding:56px 0 36px;background:linear-gradient(180deg,rgba(103,100,82,.94) 0,rgba(103,100,82,0) 60px),var(--putzdunkel) 0 0/var(--kachel) repeat #28332e}
   .s-gaeste{padding:44px 0 36px}
-  .s-feiern{padding:36px 0 28px;background:linear-gradient(180deg,var(--putz) 0,var(--putz) calc(100% - 90px),#8f8a6f calc(100% - 40px),#5f6553 100%)}
+  .s-feiern{padding:36px 0 28px;background:linear-gradient(180deg,rgba(30,41,37,0) 0,rgba(30,41,37,0) calc(100% - 90px),rgba(30,41,37,.28) calc(100% - 40px),rgba(30,41,37,.55) 100%)}
   .s-besuch{padding:36px 0 44px}
 }
 /* ===== Tablet hoch ===== */
@@ -353,7 +350,7 @@ footer .fiktiv{display:inline-block;padding:3px 9px;border:1px solid rgba(244,24
 }
 /* ===== Computer ===== */
 @media (min-width:900px){
-  :root{--hh:72px}
+  :root{--hh:72px;--kachel:500px}
   .wrap{padding:0 40px}
   .kopf{padding-left:30px;padding-right:30px}
   .logo b{font-size:25px}
@@ -386,12 +383,12 @@ footer .fiktiv{display:inline-block;padding:3px 9px;border:1px solid rgba(244,24
   .zimmer figure{aspect-ratio:auto;min-height:100%}
   .zimmer .liste{padding:12px 26px 16px}
   .pos{padding:7px 0}
-  .s-lounge{padding:76px 0 44px;background:linear-gradient(180deg,#535a49 0,#343e36 40px,var(--nacht) 80px,var(--nacht) 100%)}
+  .s-lounge{padding:76px 0 44px;background:linear-gradient(180deg,rgba(103,100,82,.94) 0,rgba(103,100,82,0) 80px),var(--putzdunkel) 0 0/var(--kachel) repeat #28332e}
   .lounge-grid{grid-template-columns:7fr 4fr;gap:44px;align-items:center}
   .s-gaeste{padding:64px 0 48px}
   .gaeste-kopf{display:flex;align-items:flex-end;justify-content:space-between;gap:30px;flex-wrap:wrap}
   .gaeste-kopf h2{margin:0}
-  .s-feiern{padding:52px 0 40px;background:linear-gradient(180deg,var(--putz) 0,var(--putz) calc(100% - 110px),#8f8a6f calc(100% - 48px),#5f6553 100%)}
+  .s-feiern{padding:52px 0 40px;background:linear-gradient(180deg,rgba(30,41,37,0) 0,rgba(30,41,37,0) calc(100% - 110px),rgba(30,41,37,.28) calc(100% - 48px),rgba(30,41,37,.55) 100%)}
   .feiern-grid{grid-template-columns:5fr 7fr;gap:24px;align-items:stretch}
   .fbild{aspect-ratio:auto;min-height:100%}
   .fkarten{gap:20px}
